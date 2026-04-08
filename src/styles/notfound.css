@@ -1,0 +1,120 @@
+/* Not Found Page */
+.notfound-page {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  min-height: 100vh;
+  padding: 60px 20px 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BACKGROUND TEXT */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 140px;
+  font-weight: 900;
+  color: rgba(212, 255, 0, 0.05);
+  line-height: 1;
+  text-align: center;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-text span {
+  display: block;
+}
+
+/* Not Found Content */
+.notfound-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.notfound-content h1 {
+  font-size: 120px;
+  font-weight: 900;
+  color: #d4ff00;
+  margin-bottom: 20px;
+  text-shadow: 0 10px 30px rgba(212, 255, 0, 0.3);
+}
+
+.notfound-content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.notfound-content p {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .notfound-page {
+    padding: 40px 15px 30px;
+  }
+
+  .notfound-content h1 {
+    font-size: 80px;
+  }
+
+  .notfound-content h2 {
+    font-size: 28px;
+  }
+
+  .notfound-content p {
+    font-size: 14px;
+  }
+
+  .bg-text {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound-page {
+    padding: 30px 10px 20px;
+  }
+
+  .notfound-content h1 {
+    font-size: 60px;
+  }
+
+  .notfound-content h2 {
+    font-size: 20px;
+  }
+
+  .notfound-content p {
+    font-size: 12px;
+  }
+
+  .bg-text {
+    font-size: 70px;
+  }
+}

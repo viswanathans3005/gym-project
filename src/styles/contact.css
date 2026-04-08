@@ -1,0 +1,550 @@
+/* Contact Page */
+.contact-page {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  min-height: 100vh;
+  padding: 60px 20px 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BACKGROUND TEXT */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 140px;
+  font-weight: 900;
+  color: rgba(212, 255, 0, 0.05);
+  line-height: 1;
+  text-align: center;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-text span {
+  display: block;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: slideDown 0.6s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #d4ff00, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact-header p {
+  font-size: 18px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  flex-grow: 1;
+}
+
+/* Info Section */
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+  border: 1px solid #3a3a3a;
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.info-card:hover {
+  border-color: #d4ff00;
+  box-shadow: 0 15px 40px rgba(212, 255, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.card-header .icon {
+  font-size: 32px;
+  color: #d4ff00;
+}
+
+.info-card h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.info-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #ccc;
+  margin: 10px 0;
+}
+
+/* Address */
+.address {
+  font-size: 15px !important;
+  color: #aaa !important;
+  line-height: 1.8 !important;
+}
+
+.address strong {
+  color: #d4ff00;
+  font-size: 16px;
+}
+
+/* Contact Items */
+.contact-item {
+  margin: 15px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-item p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.contact-item a {
+  color: #d4ff00;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #ffff00;
+  text-decoration: underline;
+}
+
+/* Gym Details */
+.gym-details {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #aaa;
+}
+
+.gym-details strong {
+  color: #d4ff00;
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.gym-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.gym-details li {
+  padding: 6px 0;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.gym-details hr {
+  border: none;
+  border-top: 1px solid #3a3a3a;
+  margin: 15px 0;
+}
+
+/* Social Links */
+.social-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.social-btn.instagram {
+  background: linear-gradient(135deg, #833AB4, #E1306C);
+  border-color: #E1306C;
+  color: white;
+}
+
+.social-btn.instagram:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(225, 48, 108, 0.4);
+}
+
+.social-btn.youtube {
+  background: linear-gradient(135deg, #FF0000, #CC0000);
+  border-color: #FF0000;
+  color: white;
+}
+
+.social-btn.youtube:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+.social-btn.whatsapp {
+  background: linear-gradient(135deg, #12db00, #128c3b);
+  border-color: #007e06;
+  color: white;
+}
+
+.social-btn.whatsapp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.social-btn svg {
+  font-size: 18px;
+}
+
+/* Media Section */
+.contact-media-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Map Card */
+.map-card {
+  background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+  border: 1px solid #3a3a3a;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.6s ease-out 0.1s backwards;
+  transition: all 0.3s ease;
+}
+
+.map-card:hover {
+  border-color: #d4ff00;
+  box-shadow: 0 15px 40px rgba(212, 255, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.map-card h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+}
+
+/* QR Code Card */
+.qr-card {
+  background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+  border: 1px solid #3a3a3a;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.6s ease-out 0.2s backwards;
+  transition: all 0.3s ease;
+}
+
+.qr-card:hover {
+  border-color: #d4ff00;
+  box-shadow: 0 15px 40px rgba(212, 255, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.qr-card h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.qr-card > p:first-of-type {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.qr-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 20px;
+  background: #000;
+  border-radius: 12px;
+}
+
+.qr-container img {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+}
+
+.qr-note {
+  color: #d4ff00;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Trainer Card */
+.trainer-card {
+  background: linear-gradient(135deg, #43b815, #e29118);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out 0.3s backwards;
+  box-shadow: 0 10px 30px rgba(5, 5, 5, 0.3);
+  transition: all 0.3s ease;
+}
+
+.trainer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(212, 214, 202, 0.4);
+}
+
+.trainer-card h2 {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.trainer-info {
+  color: #000;
+}
+
+.trainer-name {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.trainer-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.trainer-experience {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0 20px 0;
+}
+
+.book-session {
+  background: linear-gradient(135deg, #000, #333);
+  color: #d4ff00;
+  border: 2px solid #000;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.book-session:hover {
+  background: #000;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.book-session:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-header h1 {
+    font-size: 40px;
+  }
+
+  .contact-header p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 40px 15px 30px;
+  }
+
+  .contact-header h1 {
+    font-size: 32px;
+  }
+
+  .contact-header p {
+    font-size: 14px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .info-card,
+  .map-card,
+  .qr-card {
+    padding: 20px;
+  }
+
+  .card-header .icon {
+    font-size: 28px;
+  }
+
+  .info-card h2 {
+    font-size: 18px;
+  }
+
+  .social-links {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .map-card iframe {
+    height: 250px;
+  }
+
+  .qr-container img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .trainer-name {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 30px 10px 20px;
+  }
+
+  .contact-header h1 {
+    font-size: 24px;
+  }
+
+  .info-card,
+  .map-card,
+  .qr-card {
+    padding: 15px;
+  }
+
+  .info-card h2,
+  .map-card h2,
+  .qr-card h2 {
+    font-size: 16px;
+  }
+
+  .info-card p {
+    font-size: 13px;
+  }
+
+  .social-links {
+    grid-template-columns: 1fr;
+  }
+
+  .social-btn {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .map-card iframe {
+    height: 200px;
+  }
+
+  .qr-container img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .trainer-name {
+    font-size: 24px;
+  }
+
+  .book-session {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}

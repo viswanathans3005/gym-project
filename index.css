@@ -1,0 +1,31 @@
+body {
+  background: black;
+  position: relative;
+}
+
+/* LIGHT BACKGROUND IMAGE */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: url("bg.jpg") center/cover no-repeat;
+  opacity: 0.05;   /* LIGHT EFFECT */
+
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden; /* FIX FINAL SCROLL ISSUE */
+}
+html {
+  scroll-behavior: smooth;
+}
+.btn:hover {
+  box-shadow: 0 0 15px #d4ff00;
+}
