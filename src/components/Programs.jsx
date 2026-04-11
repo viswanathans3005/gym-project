@@ -2,7 +2,7 @@ import "../styles/programs.css";
 
 import weightImg from "../assets/images/weight.jpg";
 import cardioImg from "../assets/images/cardio.jpg";
-import yogaImg from "../assets/images/yoga.jpg";
+import yogaImg from "../assets/images/Yoga.jpg";
 import crossfitImg from "../assets/images/crossfit.jpg";
 
 const Programs = () => {
